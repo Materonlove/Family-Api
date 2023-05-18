@@ -51,7 +51,7 @@ def add_member():
         jackson_family.add_member(body)
         return jsonify({"msg": "member added"}), 200
     else:
-        return jsonify({"msg": "bad request"}), 200
+        return jsonify({"msg": "bad request"}), 400
 
 
 
@@ -67,7 +67,7 @@ def get_member(member_id):
     if member:
         return jsonify(member), 200
     else:
-        return jsonify({"msg": "member do not exist"}), 200
+        return jsonify({"msg": "member do not exist"}), 400
 
 
 
